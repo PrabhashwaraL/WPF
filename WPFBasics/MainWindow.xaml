@@ -1,0 +1,79 @@
+﻿<Window x:Class="WPFBasics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFBasics"
+        mc:Ignorable="d"
+        Title="WPF Basics" Height="450" Width="400">
+
+    <Border Padding="10">
+        <StackPanel>
+            <!-- Buttons -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="ApplyBtn" Click="ApplyBtn_Click" Margin="0 0 6 0" Grid.Column="0" Content="Apply" />
+                <Button x:Name="ResetBtn" Click="ResetBtn_Click" Margin="3 0 3 0" Grid.Column="1" Content="Reset" />
+                <Button Margin="6 0 0 0" Grid.Column="2" Content="Refresh" />
+            </Grid>
+            <!-- End Buttons -->
+            <TextBlock Text="Pulse Properties" FontWeight="Bold" Margin="0 12 0 6"/>
+            <!-- Discription -->
+            <TextBlock Text="Discription" />
+            <TextBox x:Name="descriptionTxt" Padding="2" />
+            <!-- End Discription-->
+            <!-- Status and Revision -->
+            <Grid Margin="0 2 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Margin="0 0 6 0" Grid.Column="0">
+                    <TextBlock Text="Status" />
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2" />
+                </StackPanel>
+
+                <StackPanel Margin="6 0 0 0" Grid.Column="1">
+                    <TextBlock Text="Revision" />
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2" />
+                </StackPanel>
+            </Grid>
+            <!-- End Status and Revision-->
+            <TextBlock Margin="0 2 0 0" Text="Port Number" />
+            <TextBox IsReadOnly="True" Background="#eee" Padding="2" />
+            <TextBlock Text="Raw Material" FontWeight="Bold" Margin="0 12 0 6"/>
+            <TextBlock Text="Material" />
+            <ComboBox SelectedIndex="1" Padding="2">
+                <ComboBoxItem>Item</ComboBoxItem>
+                <ComboBoxItem>Item1</ComboBoxItem>
+                <ComboBoxItem>Item2</ComboBoxItem>
+            </ComboBox>
+            <TextBlock Text="Manufacturing Information" FontWeight="Bold" Margin="0 12 0 6"/>
+            <TextBlock Text="Work Centers" />
+            <Grid Margin="0 2 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <CheckBox Content="Weld" />
+                    <CheckBox Content="Weld" />
+                    <CheckBox Content="Weld" />
+                    <CheckBox Content="Weld" />
+                    <CheckBox Content="Weld" />
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <CheckBox Content="Weld" />
+                    <CheckBox Content="Weld" />
+                    <CheckBox Content="Weld" />
+                    <CheckBox Content="Weld" />
+                    <CheckBox Content="Weld" />
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>
